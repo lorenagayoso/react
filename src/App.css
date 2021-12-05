@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+button.navbar-toggler{
+margin-right: 5%;
+}
+
+.navbar-brand{
+display: flex;
+width: auto;
+align-items: center;
+margin-left: 5%;
+}
+
+div#cart{
+margin-right: 5%;
+margin-left: 5%;
+display: flex;
+width: 10%;
+justify-content: flex-start;}
+
+.navbar-nav{
+display: flex;
+justify-content: space-evenly;
+width: 80%;
+}
+
+.navbar-collapse.show .navbar-nav{
+margin-left: 5%;
+}
+
