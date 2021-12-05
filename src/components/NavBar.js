@@ -29,7 +29,12 @@ function Navigation(props) {
     </Nav>
     </Navbar.Collapse>
     <div id="cart">
+    <div id="cartIcon">
     <img src={cart} width="40px" height="40px"/>
+    </div>
+    <span id="cartCounter" class="border border-white rounded-circle rounded-sm">
+    <p>3</p>
+    </span>
     </div>
     </Navbar>
     </div>
