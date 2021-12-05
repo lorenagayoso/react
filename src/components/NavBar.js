@@ -1,9 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
 import 'bootstrap/dist/css/bootstrap.css'
 import { Nav , Navbar , NavDropdown } from 'react-bootstrap'
 
-function App() {
+function Navigation() {
   return (
     <div className="App">
     <Navbar bg="dark" variant="dark" sticky="top" expand="sm" collapseOnSelect>
@@ -28,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+export default Navigation;
