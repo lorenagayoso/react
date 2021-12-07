@@ -1,15 +1,15 @@
 import logo from '../logo.svg'
 import '../App.css';
 import cart from './cart_icon.png'
-import React from 'react'
+import React , {useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import { Nav , Navbar , NavDropdown } from 'react-bootstrap'
 
 function Navigation(props) {
+  const [referencia,funcion] = useState(3);
   const {cat1:category_1, cat2:category_2 , cat3: category_3} = props
   return (
     <div className="navClass">
-
     <Navbar bg="dark" variant="dark" sticky="top" expand="sm" collapseOnSelect>
     <Navbar.Brand>
     <img src={logo} width="40px" height="40px" />
@@ -33,7 +33,7 @@ function Navigation(props) {
     <img src={cart} width="40px" height="40px"/>
     </div>
     <span id="cartCounter" class="border border-white rounded-circle rounded-sm">
-    <p>3</p>
+    <p>{referencia}</p>
     </span>
     </div>
     </Navbar>
