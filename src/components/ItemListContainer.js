@@ -1,8 +1,17 @@
 import React from 'react'
+import ItemCard from '../ItemCard.js'
+
 
 function ItemListContainer() {
   return (
-    <h1> ItemListContainer </h1>
+    <>
+    <h1 className = "text-center mt-3"> All items</h1>
+    <section className="py-4 container">
+    <div className="row justify-content-center">
+    <ItemCard/>
+    </div>
+    </section>
+    </>
   );
 }
 
