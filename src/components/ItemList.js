@@ -4,7 +4,7 @@ import data from './data.js'
 
 
 
-function ItemList() {
+function ItemList({props}) {
   return (
     <>
     <h1 className = "text-center mt-3"> All items</h1>

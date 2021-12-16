@@ -8,12 +8,17 @@ import {CartProvider} from 'react-use-cart'
 
 function Item(props) {
 
-let [cartValue,action] = useState(0);
+let [cartValue,setCartValue] = useState(0);
+const stock = 10;
 const onAdd = ()=>{
-    action(++cartValue) 
+    if(cartValue < stock){
+    setCartValue(++cartValue)
+    } 
     },
   onRemove = ()=>{
-    action(cartValue - 1) 
+    if(cartValue > 0){
+    setCartValue(cartValue - 1)
+    } 
     }
   return (
   <div  class="col-11 col-md-6 col-lg-3 mx-0 mb-4">
@@ -26,7 +31,7 @@ const onAdd = ()=>{
         <div class="col-lg-6">
         <div class="input-group">
         <button onClick={onRemove} type="button" class="btn btn-danger">-</button>
-        <input type="text" id="quantity" name="quantity" class="form-control input-number" value={cartValue}  min="1" max="6"/>
+        <input type="text" id="quantity" name="quantity" class="form-control input-number" value={cartValue}/>
         <button onClick={onAdd} type="button" class="btn btn-success">+</button>
         </div>
         </div>

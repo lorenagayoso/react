@@ -1,14 +1,16 @@
 import React from 'react'
-import ItemCard from '../ItemCard.js'
+import ItemList from './ItemList.js'
+import data from './data.js'
+
 
 
 function ItemListContainer() {
   return (
     <>
-    <h1 className = "text-center mt-3"> All items</h1>
+    <h1 className = "text-center mt-3"> My Ecommerce</h1>
     <section className="py-4 container">
     <div className="row justify-content-center">
-    <ItemCard/>
+    <ItemList  productos={data}/>
     </div>
     </section>
     </>
