@@ -10,21 +10,24 @@ const data = {
 		img: img1,
 		title : 'Camisa cuadros rojo',
 		desc : 'SANGTREE - Camisas informales para hombre y niño, diseño de franela a cuadros y manga larga, tallas 3 meses a 9XL',
-		price: '$850,00'
+		price: '$850,00',
+		stock: '12'
 
 	},{
 		id:2,
 		img: img2,
 		title : 'Camisa cuadros gris',
 		desc : 'SANGTREE - Camisas informales para hombre y niño, diseño de franela a cuadros y manga larga, tallas 3 meses a 9XL',
-		price: '$1000'
+		price: '$1000',
+		stock: '5'
 
 	},{
 		id:3,
 		img: img3,
 		title : 'Camisa cuadros naranja',
 		desc : 'SANGTREE - Camisas informales para hombre y niño, diseño de franela a cuadros y manga larga, tallas 3 meses a 9XL',
-		price: '$659,00'
+		price: '$659,00',
+		stock: '7'
 
 	}
 

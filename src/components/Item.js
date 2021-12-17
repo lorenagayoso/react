@@ -9,9 +9,9 @@ import {CartProvider} from 'react-use-cart'
 function Item(props) {
 
 let [cartValue,setCartValue] = useState(0);
-const stock = 10;
+const max = props.stock
 const onAdd = ()=>{
-    if(cartValue < stock){
+    if(cartValue < max){
     setCartValue(++cartValue)
     } 
     },

@@ -1,5 +1,6 @@
 import React from 'react'
 import ItemList from './ItemList.js'
+import ItemDetail from './ItemDetail.js'
 import data from './data.js'
 
 

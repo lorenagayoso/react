@@ -12,7 +12,7 @@ function ItemList({props}) {
     <div className="row justify-content-center">
     {data.productData.map((item,index)=>{
       return(
-      <Item img={item.img} title={item.title} desc={item.desc} price={item.price} key={index}/>
+      <Item img={item.img} title={item.title} desc={item.desc} price={item.price} stock={item.stock} key={index}/>
       )
     })}
     </div>
