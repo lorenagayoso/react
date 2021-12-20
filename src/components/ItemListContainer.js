@@ -1,7 +1,8 @@
-import React from 'react'
+import React,{useEffect} from 'react'
+import {useParams} from 'react-router-dom'
 import ItemList from './ItemList.js'
-import ItemDetail from './ItemDetail.js'
 import data from './data.js'
+
 
 
 

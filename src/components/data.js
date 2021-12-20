@@ -34,4 +34,13 @@ const data = {
 	],
 };
 
+const categories = {
+	info:[
+	{
+		title:"men",
+		id:"123"
+	}
+	]
+};
+
 export default data;
