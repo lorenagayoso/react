@@ -13,16 +13,12 @@ import {BrowserRouter as Router, Routes, Switch, Route} from "react-router-dom"
 function App() {
   return (
   <Router>
-  <React.Fragment className="App">
   <Navigation cat1="Men" cat2="Women" cat3="Children"/>
   <Routes>
-  <Route exact path="/" component={ItemListContainer}></Route>
-  <Route exact path="/category/:id" component={ItemListContainer}></Route>
-  <Route exact path="/item/:id" component={ItemDetailContainer}></Route>
+  <Route exact path="/" element={<ItemListContainer/>}></Route>
+  <Route path="/category/:id" element={<ItemListContainer/>}></Route>
+  <Route path="/item/:id" element={<ItemDetailContainer/>}></Route>
   </Routes>
-  <ItemListContainer/>
-  <ItemDetailContainer/>
-  </React.Fragment>
   </Router>
   );
 }

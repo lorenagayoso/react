@@ -3,7 +3,6 @@ import React, {useState} from 'react'
 import ReactDom from 'react-dom'
 import img1 from './img1.jpg'
 import data from './data.js'
-import Navigation from './NavBar.js'
 
 
 
@@ -28,26 +27,25 @@ const onAdd = ()=>{
     }
   return (
 <>
-<Navigation cat1="Men" cat2="Women" cat3="Children"/>
 <h1 className = "text-center mt-3"> Product Detail</h1>
 <section className="py-4 container">
 <div className="row">
- <div class="card mb-3">
-  <div class="row g-0 align-items-center">
-    <div class="col-md-6">
+ <div className="card mb-3">
+  <div className="row g-0 align-items-center">
+    <div className="col-md-6">
     <img src={img1}/>
     </div>
-      <div class="col-md-5">
-      <div class="card-body">
-        <h5 class="card-title">{title}</h5>
-        <p class="card-text">SANGTREE - Camisas informales para hombre y niño, diseño de franela a cuadros y manga larga, tallas 3 meses a 9XL</p>
-        <h5 class="card-title">850 usd</h5>
-        <p class="card-text"><small class="text-muted">Disponible: {stock}</small></p>
-        <div class="col-lg-3">
-        <div class="input-group">
-        <button onClick={onRemove} type="button" class="btn btn-danger">-</button>
-        <input type="text" id="quantity" name="quantity" class="form-control input-number" value={cartValue}/>
-        <button onClick={onAdd} type="button" class="btn btn-success">+</button>
+      <div className="col-md-5">
+      <div className="card-body">
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">SANGTREE - Camisas informales para hombre y niño, diseño de franela a cuadros y manga larga, tallas 3 meses a 9XL</p>
+        <h5 className="card-title">850 usd</h5>
+        <p className="card-text"><small className="text-muted">Disponible: {stock}</small></p>
+        <div className="col-lg-3">
+        <div className="input-group">
+        <button onClick={onRemove} type="button" className="btn btn-danger">-</button>
+        <input type="text" id="quantity" name="quantity" className="form-control input-number" value={cartValue}/>
+        <button onClick={onAdd} type="button" className="btn btn-success">+</button>
         </div>
         </div>
 
