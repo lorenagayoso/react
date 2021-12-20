@@ -3,6 +3,8 @@ import React, {useState} from 'react'
 import ReactDom from 'react-dom'
 import img1 from './img1.jpg'
 import data from './data.js'
+import Navigation from './NavBar.js'
+
 
 
 
@@ -26,6 +28,7 @@ const onAdd = ()=>{
     }
   return (
 <>
+<Navigation cat1="Men" cat2="Women" cat3="Children"/>
 <h1 className = "text-center mt-3"> Product Detail</h1>
 <section className="py-4 container">
 <div className="row">
