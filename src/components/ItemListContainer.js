@@ -6,7 +6,7 @@ import data from './data.js'
 
 
 
-function ItemListContainer() {
+function ItemListContainer({props}) {
   return (
     <>
     <h1 className = "text-center mt-3"> My Ecommerce</h1>

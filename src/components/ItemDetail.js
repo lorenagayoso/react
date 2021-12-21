@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import ReactDom from 'react-dom'
 import img1 from './img1.jpg'
 import data from './data.js'
+import {useParams} from 'react-router-dom'
 
 
 
@@ -13,7 +14,6 @@ const img = data.productData[0].img;
 const desc = data.productData[0].desc;
 const price = data.productData[0].price;
 const stock = data.productData[0].stock;
-const id = data.productData[0].id;
 let {id} = useParams()
 
 let [cartValue,setCartValue] = useState(0);
@@ -43,6 +43,7 @@ const onAdd = ()=>{
         <p className="card-text">SANGTREE - Camisas informales para hombre y niño, diseño de franela a cuadros y manga larga, tallas 3 meses a 9XL</p>
         <h5 className="card-title">850 usd</h5>
         <p className="card-text"><small className="text-muted">Disponible: {stock}</small></p>
+        <p className="card-text"><small className="text-muted">SKU:{id}</small></p>
         <div className="col-lg-3">
         <div className="input-group">
         <button onClick={onRemove} type="button" className="btn btn-danger">-</button>
