@@ -1,5 +1,7 @@
 import React from 'react'
 import ItemDetail from './ItemDetail.js'
+import {useParams} from 'react-router-dom'
+
 
 
 

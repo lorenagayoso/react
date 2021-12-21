@@ -13,6 +13,8 @@ const img = data.productData[0].img;
 const desc = data.productData[0].desc;
 const price = data.productData[0].price;
 const stock = data.productData[0].stock;
+const id = data.productData[0].id;
+let {id} = useParams()
 
 let [cartValue,setCartValue] = useState(0);
 const onAdd = ()=>{
