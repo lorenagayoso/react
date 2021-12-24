@@ -4,8 +4,7 @@ import ReactDom from 'react-dom'
 import 'bootstrap/dist/css/bootstrap.css'
 import {CartProvider} from 'react-use-cart'
 import {Link} from "react-router-dom"
-
-
+import Cart from './Cart.js'
 
 
 function Item(props) {
@@ -35,12 +34,19 @@ const onAdd = ()=>{
         <h5 class="card-title">{props.price}</h5>
         <p class="card-text">{props.desc}</p>
         <div class="col-lg-6">
-        <div class="input-group">
-        <button onClick={onRemove} type="button" class="btn btn-danger">-</button>
-        <input type="text" id="quantity" name="quantity" class="form-control input-number" value={cartValue}/>
-        <button onClick={onAdd} type="button" class="btn btn-success">+</button>
+        <div className="input-group">
+        <button onClick={onRemove} type="button" className="btn btn-danger">-</button>
+        <input type="text" id="quantity" name="quantity" className="form-control input-number" value={cartValue}/>
+        <button onClick={onAdd} type="button" className="btn btn-success">+</button>
         </div>
         </div>
+        <br/>
+        <Link to="Cart">
+        <div>
+        <button type="button" className="btn btn-info my-2 my-sm-0">Finalizar compra</button>
+        </div>
+        </Link>
+
       </div>
     </div>
   </div>
