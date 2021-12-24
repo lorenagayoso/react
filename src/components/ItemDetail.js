@@ -3,7 +3,9 @@ import React, {useState} from 'react'
 import ReactDom from 'react-dom'
 import img1 from './img1.jpg'
 import data from './data.js'
+import {Link} from "react-router-dom"
 import {useParams} from 'react-router-dom'
+import Cart from './Cart.js'
 
 
 
@@ -51,7 +53,12 @@ const onAdd = ()=>{
         <button onClick={onAdd} type="button" className="btn btn-success">+</button>
         </div>
         </div>
-
+        <br/>
+        <Link to="Cart">
+        <div>
+        <button type="button" className="btn btn-info my-2 my-sm-0">Comprar</button>
+        </div>
+        </Link>
 
       </div>
     </div>
