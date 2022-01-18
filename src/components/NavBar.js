@@ -6,10 +6,11 @@ import 'bootstrap/dist/css/bootstrap.css'
 import { Nav , Navbar , NavDropdown } from 'react-bootstrap'
 import {Link} from 'react-router-dom'
 import data from './data.js'
+import {useCart} from 'react-use-cart'
 
 
 function Navigation(props) {
-  const [referencia,funcion] = useState(3);
+  const {totalItems} = useCart();
   const {cat1:category_1, cat2:category_2 , cat3: category_3} = props
   return (
     <div className="navClass">
@@ -42,7 +43,7 @@ function Navigation(props) {
     <img src={cart} width="40px" height="40px"/>
     </div>
     <span id="cartCounter" class="border border-white rounded-circle rounded-sm">
-    <p>{referencia}</p>
+    <p>{totalItems}</p>
     </span>
     </div>
     </Navbar>

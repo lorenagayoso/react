@@ -1,4 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css'
+import {CartProvider, useCart} from 'react-use-cart'
 import React, {useState} from 'react'
 import ReactDom from 'react-dom'
 import img1 from './img1.jpg'
@@ -18,18 +19,9 @@ const price = data.productData[0].price;
 const stock = data.productData[0].stock;
 let {id} = useParams()
 
-let [cartValue,setCartValue] = useState(0);
-const onAdd = ()=>{
-    if(cartValue < stock){
-    setCartValue(++cartValue)
-    } 
-    },
-  onRemove = ()=>{
-    if(cartValue > 0){
-    setCartValue(cartValue - 1)
-    } 
-    }
-  return (
+const {totalItems,items,addItem,updateItemQuantity,removeItem} = useCart()
+
+return (
 <>
 <h1 className = "text-center mt-3"> Product Detail</h1>
 <section className="py-4 container">
@@ -42,21 +34,21 @@ const onAdd = ()=>{
       <div className="col-md-5">
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
-        <p className="card-text">SANGTREE - Camisas informales para hombre y niño, diseño de franela a cuadros y manga larga, tallas 3 meses a 9XL</p>
-        <h5 className="card-title">850 usd</h5>
+        <p className="card-text">{desc}</p>
+        <h5 className="card-title">$ {price}</h5>
         <p className="card-text"><small className="text-muted">Disponible: {stock}</small></p>
         <p className="card-text"><small className="text-muted">SKU:{id}</small></p>
-        <div className="col-lg-3">
+        <div className="col-lg-5">
         <div className="input-group">
-        <button onClick={onRemove} type="button" className="btn btn-danger">-</button>
-        <input type="text" id="quantity" name="quantity" className="form-control input-number" value={cartValue}/>
-        <button onClick={onAdd} type="button" className="btn btn-success">+</button>
+        <button type="button" className="btn btn-success"
+        onClick={()=>addItem(data.productData[0])} 
+        >Sumar a carrito</button>
         </div>
         </div>
         <br/>
         <Link to="Cart">
         <div>
-        <button type="button" className="btn btn-info my-2 my-sm-0">Comprar</button>
+        <button type="button" className="btn btn-info my-2 my-sm-0">Finalizar compra</button>
         </div>
         </Link>
 
