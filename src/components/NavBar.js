@@ -15,7 +15,7 @@ function Navigation(props) {
   return (
     <div className="navClass">
       <Navbar bg="dark" variant="dark" sticky="top" expand="sm" collapseOnSelect>
-        <Link to="/react">
+        <Link to="/">
           <Navbar.Brand>
             <img src={logo} width="40px" height="40px"/>
             Ecommerce

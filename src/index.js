@@ -1,8 +1,25 @@
 import React from 'react';
+import{StrictMode} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAXhaZsAHTddeN9O8aRn0vZ21o6pLT-Ze4",
+  authDomain: "coderhouse-22f3a.firebaseapp.com",
+  projectId: "coderhouse-22f3a",
+  storageBucket: "coderhouse-22f3a.appspot.com",
+  messagingSenderId: "256617869238",
+  appId: "1:256617869238:web:651b7fa8126bc400935b17",
+  measurementId: "G-7730YKJKYP"
+};
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
 
 ReactDOM.render(
   <React.StrictMode>
